@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-pragma solidity ^0.8.7;
+pragma solidity >=0.8.9;
 pragma experimental ABIEncoderV2;
 
 /// @notice Uniswap V3 swap router
@@ -17,8 +17,5 @@ interface ISwapRouter {
         uint160 sqrtPriceLimitX96;
     }
 
-    function exactOutputSingle(ExactOutputSingleParams calldata params)
-        external
-        payable
-        returns (uint256 amountIn);
+    function exactOutputSingle(ExactOutputSingleParams calldata params) external payable returns (uint256 amountIn);
 }
